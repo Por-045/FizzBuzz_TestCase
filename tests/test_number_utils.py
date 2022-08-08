@@ -31,6 +31,14 @@ class FizzBuzzTest(unittest.TestCase):
         result = is_fizz_buzz(number) 
         #assert
         self.assertEqual(result, excepted_result)
+    
+    def test_give_0_should_less_than_one(self):
+        number = 0
+        excepted_result = 'less than one'
+
+        result = is_fizz_buzz(number)
+
+        self.assertEqual(result, excepted_result)
 
     def test_give_1001_should_more_than_thousand(self):
         number = 1001
