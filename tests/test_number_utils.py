@@ -1,3 +1,5 @@
+from unittest import result
+from numpy import number
 from coe_number.number_utils import is_fizz_buzz
 
 import unittest
@@ -28,4 +30,12 @@ class FizzBuzzTest(unittest.TestCase):
         #act
         result = is_fizz_buzz(number) 
         #assert
+        self.assertEqual(result, excepted_result)
+
+    def test_give_1001_should_more_than_thousand(self):
+        number = 1001
+        excepted_result = 'more than thousand'
+
+        result = is_fizz_buzz(number)
+
         self.assertEqual(result, excepted_result)
